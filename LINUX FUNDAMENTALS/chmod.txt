@@ -1,0 +1,85 @@
+General Description - chmod stands for "change mode".
+It controls who can read, write, or execute a file or directory.
+
+In cybersecurity terms:
+chmod is about permissions, privilege escalation, and misconfigurations — which are everywhere in CTFs.
+
+Before understanding the imp chmod flags one must understand linux permission basics.
+
+So, every file has 3 permission groups and 3 permission types. These are-
+
+Group	   Meaning
+User	   File owner
+Group	   Group members
+Others	   Everyone else
+
+Permission types:
+
+Permission	   Symbol	   Meaning
+Read	       r	       View file
+Write	       w	       Modify file
+Execute	       x	       Run file
+
+Example: -rwxr-xr--
+
+Meaning:
+User → rwx (full access)
+Group → r-x (read + execute)
+Others → r-- (read only)
+
+### IMPORTANT chmod FLAGS & MODES (CTF-relevant)
+
+1. Numeric mode
+
+Example: chmod 755 script.sh
+
+Meaning:
+7 → rwx (user)
+5 → r-x (group)
+5 → r-x (others)
+
+Common values:
+
+Number	   Meaning
+777	       Everyone can do everything 
+755	       Executable scripts
+644    	   Normal files
+600	       Private secrets
+
+
+2. +x → To Make a file executable
+
+Example: chmod +x exploit.sh
+
+Without this, your script will not run, no matter how correct it is.
+
+
+
+3. -x, -r, -w → To Remove Permissions
+
+Example: chmod -x flag.txt
+
+
+
+4️. u, g, o, a → Permission targets
+
+Example: chmod u+x file.sh -> This is a precision control.
+
+Targets:
+u → user
+g → group
+o → others
+a → all
+
+Example: chmod o-r secret.txt -> Removes read access from others.
+
+
+
+5️. -R → Recursive permissions
+
+Example: chmod -R 755 folder/
+
+CTF use:
+-Fix broken extracted archives
+-Make entire challenge directories usable
+
