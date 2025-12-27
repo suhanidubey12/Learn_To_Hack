@@ -1,0 +1,28 @@
+Breif Descrption of echo:
+The echo command is used to display text or variables to the terminal. It’s very commonly used in shell scripting and command-line output.
+Flags used:
+
+-> -n   Suppress the trailing newline.
+
+        Normally, echo prints a newline at the end. Using -n keeps the cursor on the same line.
+Example:echo -n "Hello"
+        echo "World"
+        # Output: HelloWorld (on same line)
+
+
+
+
+
+-> -e   Enable interpretation of backslash escapes like \n, \t, etc.
+Example:echo -e "Hello\nWorld"
+        # Output:
+        # Hello
+        # World
+
+
+
+-> -E (default on most systems)   Disable interpretation of backslash escapes.
+                                  example:  echo -E "Hello\nWorld"
+                                  # Output: Hello\nWorld (prints literally)
+
+*On most Linux systems, echo is a shell builtin, so its behavior can slightly differ between Bash, Zsh, etc.
