@@ -1,0 +1,29 @@
+Description
+htop is an interactive system-monitor process-viewer and manager. It is designed as a more modern, colorful, and user-friendly alternative to the classic top command. It allows you to scroll vertically and horizontally, see full command lines, and manage processes using your mouse or keyboard shortcuts.
+
+Basic Syntax
+htop [OPTIONS]
+
+Useful Features & Flags
+1. F3 (Search)
+Quickly find a specific process by typing its name. It highlights the matches as you type.
+
+2. F4 (Filter)
+This hides everything except the processes that match your search term, making it easier to monitor a specific application.
+
+3. F5 (Tree View)
+Organizes processes into a "tree" structure so you can see the parent-child relationships and which programs started which sub-processes.
+
+4. F6 (Sort By)
+Opens a menu to sort the process list by various columns like CPU%, MEM%, PID, or Priority.
+
+5. F9 (Kill Process)
+Allows you to send signals (like SIGTERM or SIGKILL) to a selected process to stop or restart it without needing to manually type the PID.
+
+6. -u [USER] (Filter by User)
+Starts htop showing only the processes owned by a specific user. 
+Example: htop -u root
+
+7. -d [DELAY] (Update Interval)
+Sets the delay between updates in tenths of a second. 
+Example: htop -d 10 (refreshes every 1 second)
