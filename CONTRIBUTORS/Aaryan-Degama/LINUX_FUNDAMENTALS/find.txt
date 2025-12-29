@@ -1,0 +1,56 @@
+================================================================                
+COMMAND: find
+CATEGORY: Enumeration / File System Discovery
+================================================================
+
+DESCRIPTION:
+The 'find' command is a powerful utility used to search for files and 
+directories in a directory hierarchy based on specific criteria like 
+permissions, users, groups, file type, date, and size.
+
+In a CTF (Capture The Flag) context, 'find' is one of the most important 
+tools for privilege escalation and sensitive data discovery.
+
+SYNTAX:
+find [path] [expression] [action]
+
+----------------------------------------------------------------
+USEFUL FLAGS & OPTIONS:
+----------------------------------------------------------------
+
+1. -name / -iname
+   Searches for files by name. Use '-name' for case-sensitive and 
+   '-iname' for case-insensitive searches.
+   Example: find / -name flag.txt
+
+2. -perm
+   Searches for files with specific permissions. This is crucial for 
+   finding SUID/SGID binaries.
+   Example: find / -perm -4000 (Searches for SUID bits)
+
+3. -user / -group
+   Finds files belonging to a specific user or group.
+   Example: find /home -user root
+
+4. -type
+   Filters results by file type.
+   - f : regular file
+   - d : directory
+   - l : symbolic link
+   Example: find /var/www -type d
+
+5. -size
+   Searches based on file size (use + or - for greater/less than).
+   Example: find / -size +50M (Files larger than 50 Megabytes)
+
+6. -mtime / -atime
+   Searches based on when the file was last modified or accessed (in days).
+   Example: find /etc -mtime -1 (Files modified in the last 24 hours)
+
+7. -exec
+   Executes a command on every file found. The '{}' placeholder 
+   represents the filename found.
+   Example: find . -name "*.log" -exec rm -f {} \;
+
+----------------------------------------------------------------
+
