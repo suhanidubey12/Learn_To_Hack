@@ -1,0 +1,32 @@
+Command Name: strings
+
+Description:
+strings is a Linux command used to extract printable ASCII strings from binary files.
+It is widely used in cybersecurity, reverse engineering, and CTF challenges to find
+hardcoded passwords, URLs, flags, API keys, or readable text inside executables.
+
+Usage:
+strings [OPTIONS] FILE
+
+Important Flags:
+
+- -n <number>
+  Displays strings with a minimum length of the specified number of characters.
+  Example: strings -n 8 binary_file
+
+- -a
+  Scans the entire file instead of only initialized sections (useful for binaries).
+
+- -t x
+  Displays the offset of each string in hexadecimal format.
+
+- -t d
+  Displays the offset of each string in decimal format.
+
+- -e <encoding>
+  Selects character encoding. Common values are s (ASCII) and l (16-bit little-endian).
+
+CTF / Security Use Case:
+The strings command is commonly used to extract flags, credentials, hidden messages,
+file paths, URLs, and suspicious text from compiled binaries, memory dumps, and malware
+samples during CTFs and forensic analysis.
