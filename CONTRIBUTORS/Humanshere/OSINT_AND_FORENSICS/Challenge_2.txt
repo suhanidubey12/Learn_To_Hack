@@ -1,3 +1,3 @@
-flag- EveryOne_Loves_Maggi
+flag- geek{EveryOne_Loves_Maggi}
 Method- simply saw the metadata using exiftool
 ss link- https://drive.google.com/file/d/173LdC1dTpwzgHH6fXGvOM4bGNHLRjaZF/view?usp=drive_link
