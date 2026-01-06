@@ -1,0 +1,11 @@
+This commands prints the detailed information about machine's architecture and os.
+
+this is vital for enumeration. knowing kernel version allows you to search for exploits in database
+
+Key Flags and usage
+
+-a prints all system information in a specific given order
+-r prints the kernel release version
+-m prints the machine hardware name
+-n prints the networknode hostman
+-o prints the name of the operating system

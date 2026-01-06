@@ -1,0 +1,49 @@
+#To create a new directory
+mkdir my_task
+
+#To go inside that directory
+cd my_task
+
+#to create an empty text file
+touch vishva.txt
+
+#rename
+mv vishva.txt iec2024060.txt
+
+# to move one level up the directory
+cd..
+
+#recursively delete the assignment and the files
+rm -r my_task
+
+
+
+TASK 2
+
+sudo useradd -m vishva2
+# to create a new user
+
+
+groups visvha2
+# Displays the list of groups
+
+
+sudo usermod -aG sudo vishva2
+# Adds the user to the sudo group 
+
+
+groups vishva2
+# Verifies the group update for the user
+
+
+sudo passwd vishva2
+# Set a new password for the user
+
+
+GOOGLE DRIVE LINK :- 
+
+https://drive.google.com/file/d/1K3OKW0ojX55hG0viBlBOAm_9344cIrmT/view?usp=sharing
+https://drive.google.com/file/d/1p-HiNt6ky2IeFIlUjQF282s0K8CBVdJC/view?usp=sharing
+
+
+
